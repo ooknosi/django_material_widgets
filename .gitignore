@@ -1,0 +1,89 @@
+#----------
+# Security
+#----------
+# Secret Settings
+# API Keys
+
+#-----------------------
+# Local Developer Files
+#-----------------------
+# Virtual Environment
+/env
+/start.sh
+# Static and Media CDN Emulation
+/static_cdn
+/media_cdn
+
+#--------
+# Python
+#--------
+# Compiled Source and Caches
+*.py[cod]
+__pycache__/
+# C extensions
+*.so
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+# Installer Logs
+pip-log.txt
+pip-delete-this-directory.txt
+# Unit Test / Coverage Reports
+.cache
+.coverage
+coverage.xml
+
+#--------
+# Django
+#--------
+*.log
+
+#--------------
+# Documentation
+#--------------
+# Sphinx
+docs/_build
+docs/_static
+docs/_templates
+
+#-----------------------
+# Development Databases
+#-----------------------
+*.sql
+*.sqlite
+
+#--------------------
+# OS-Generated Files
+#--------------------
+*.swp
+# OS X
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+# Windows
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+# Linux
+.directory

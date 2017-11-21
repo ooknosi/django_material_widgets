@@ -1,0 +1,49 @@
+{% extends 'demo/base.html' %}
+{% load static %}
+
+{% block head %}
+{{ form.media.css }}
+<!-- Included by clearable file input component.
+
+<link rel="stylesheet" href="{% static 'material_widgets/css/material_button.css' %}">
+<link rel="stylesheet" href="{% static 'material_widgets/css/material_icon.css' %}">
+-->
+{% endblock %}
+
+{% block content %}
+{% include 'demo/toolbar.html' with current_tab='index' %}
+<main class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+      <h1 class="mdc-typography--title">material_widgets.forms.{% block title %}MaterialForm{% endblock %}</h1>
+      <form class="demo_form" id="id_demo_form" method="post" action="">
+        {% csrf_token %}
+        {{ form.as_components }}
+        <button type="submit" class="mdc-button mdc-button--raised">Submit</button>
+        <button type="reset" class="mdc-button">Reset</button>
+      </form>
+    </div>
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+    {% if form.cleaned_data %}
+      <h1 class="mdc-typography--title">form.cleaned_data</h1>
+      {% for field, value in form.cleaned_data.items %}
+      <p>{{ field }}: {{ value }}</p>
+      {% endfor %}
+    {% endif %}
+    </div>
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block tail %}
+{{ form.media.js }}
+<!-- 
+  Place material_button.js after form.media.js to load mdc-web first.
+  We don't need to manually load material_button.js in this case because the 
+  clearable file input component calls it for us already.
+
+<script src="{% static 'material_widgets/js/material_button.js' %}"></script>
+-->
+{% endblock %}

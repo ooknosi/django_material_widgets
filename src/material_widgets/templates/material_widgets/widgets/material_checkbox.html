@@ -1,0 +1,14 @@
+<div class="mdc-form-field">
+  <div class="mdc-checkbox">
+    {% include "material_widgets/widgets/material_input.html" with class="mdc-checkbox__native-control" tooltip=widget.help_text %}
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59">
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+  </div>
+  {% if widget.label %}
+  <label{% if widget.attrs.id %} for="{{ widget.attrs.id }}"{% endif %}{% if widget.help_text %} title="{{ widget.help_text }}"{% endif %}>{{ widget.label }}</label>
+  {% endif %}
+</div>

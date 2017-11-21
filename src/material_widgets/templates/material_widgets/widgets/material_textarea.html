@@ -1,0 +1,5 @@
+<div class="{% if widget.label %}mdc-form-field {% endif %}mdc-text-field mdc-text-field--textarea{% if widget.value is not None or widget.attrs.autofocus %} mdc-text-field--upgraded{% endif %}">
+  <textarea class="mdc-text-field__input" name="{{ widget.name }}"{% include "material_widgets/widgets/material_attrs.html" %}>{% if widget.value is not None %}{{ widget.value }}{% endif %}</textarea>
+  {% if widget.label %}<label class="mdc-text-field__label{% if widget.value is not None or widget.attrs.autofocus %} mdc-text-field__label--float-above{% endif %}"{% if widget.attrs.id %} for="{{ widget.attrs.id }}"{% endif %}>{{ widget.label }}</label>{% endif %}
+</div>
+{% if widget.help_text %}<div {% include "material_widgets/widgets/material_help_text.html" %}</div>{% endif %}

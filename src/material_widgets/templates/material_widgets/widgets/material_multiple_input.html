@@ -1,0 +1,20 @@
+{% if widget.label %}<label>{{ widget.label }}</label>{% endif %}
+{% with id=widget.attrs.id %}
+<p{% if id %} id="{{ id }}"{% endif %}{% if widget.attrs.class %} class="{{ widget.attrs.class }}"{% endif %}>
+  {% for group, options, index in widget.optgroups %}
+    {% if group %}
+      <p>{{ group }}
+        <p{% if id %} id="{{ id }}_{{ index }}"{% endif %}>
+    {% endif %}
+    {% for option in options %}
+          {% if widget.is_vertical %}<div>{% endif %}
+          {% include option.template_name with widget=option %}
+          {% if widget.is_vertical %}</div>{% endif %}
+    {% endfor %}
+    {% if group %}
+        </p>
+      </p>
+    {% endif %}
+  {% endfor %}
+</p>
+{% endwith %}

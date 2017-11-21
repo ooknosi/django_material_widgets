@@ -1,0 +1,1 @@
+<input class="{{ class }}" type="{{ widget.type }}" name="{{ widget.name }}"{% if tooltip %} title="{{ tooltip }}"{% endif %}{% if widget.value is not None %} value="{{ widget.value|stringformat:'s' }}"{% endif %}{% include "material_widgets/widgets/material_attrs.html" %} />

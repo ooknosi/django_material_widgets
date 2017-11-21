@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="static/demo/images/components-72x72.png">
+    <meta name="description" content="Django Material Components Demo">
+    <meta name="keywords" content="django, material components, google">
+    <meta name="author" content="https://github.com/ooknosi">
+
+    <title>MaterialModelForm | Django Material Widgets</title>
+
+    <!-- Material Components -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Additional optional JS and CSS -->
+    
+<link href="https://unpkg.com/material-components-web@0.25.0/dist/material-components-web.min.css" type="text/css" media="all" rel="stylesheet" />
+<link href="static/material_widgets/css/material_error.css" type="text/css" media="all" rel="stylesheet" />
+<link href="static/material_widgets/css/material_text_field.css" type="text/css" media="all" rel="stylesheet" />
+<link href="static/material_widgets/css/material_button.css" type="text/css" media="all" rel="stylesheet" />
+<link href="static/material_widgets/css/material_file_input.css" type="text/css" media="all" rel="stylesheet" />
+<link href="static/material_widgets/css/material_select.css" type="text/css" media="all" rel="stylesheet" />
+<!-- Included by clearable file input component.
+
+<link rel="stylesheet" href="static/material_widgets/css/material_button.css">
+<link rel="stylesheet" href="static/material_widgets/css/material_icon.css">
+-->
+
+  </head>
+  <body class="mdc-typography" style="margin: 0px;"><!-- overrides margin: 8px from mdc-typography -->
+    
+<header class="mdc-toolbar">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <span class="mdc-toolbar__title">Django Material Widgets</span>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--shrink-to-fit" role="toolbar">
+      <nav class="mdc-tab-bar">
+        <a href="index.html" class="mdc-tab">MaterialForm</a>
+        <a href="#" class="mdc-tab mdc-tab--active">MaterialModelForm</a>
+        <span class="mdc-tab-bar__indicator"></span>
+      </nav>
+    </section>
+  </div>
+</header>
+
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6">
+      <h1 class="mdc-typography--title">material_widgets.forms.MaterialModelForm</h1>
+      <form class="demo_form" id="id_demo_form" method="post" action="">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CNB8emeo3IYXUK9e89DmY7zXncnE0Bl6pmxuKPs8nrhL5ii3tNDCw55wgeLZmb61' />
+        <div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="number" name="big_integer_field" min="-9223372036854775808" max="9223372036854775807" id="id_big_integer_field" />
+  <label class="mdc-text-field__label" for="id_big_integer_field">Big integer field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-form-field">
+  <div class="mdc-checkbox">
+    <input class="mdc-checkbox__native-control" type="checkbox" name="boolean_field" id="id_boolean_field" />
+
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59">
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+  </div>
+  
+  <label for="id_boolean_field">Boolean field</label>
+  
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="text" name="char_field" maxlength="32" id="id_char_field" />
+  <label class="mdc-text-field__label" for="id_char_field">Char field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="text" name="date_field" id="id_date_field" />
+  <label class="mdc-text-field__label" for="id_date_field">Date field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="text" name="date_time_field" id="id_date_time_field" />
+  <label class="mdc-text-field__label" for="id_date_time_field">Date time field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="number" name="decimal_field" step="0.01" id="id_decimal_field" />
+  <label class="mdc-text-field__label" for="id_decimal_field">Decimal field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="email" name="email_field" maxlength="254" id="id_email_field" />
+  <label class="mdc-text-field__label" for="id_email_field">Email field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><input class="mdc-fileinput" type="file" name="file_field"  id="id_file_field" /><label class="mdc-button" for="id_file_field"><span>File field</span></label></div>
+<div><span class="mdc-select-manager">
+  <label class="mdc-select__label" for="id_file_path_field">File path field</label>
+  <div role="listbox" tabindex="0" data-id="id_file_path_field" id="id_file_path_field" class="mdc-select">
+  
+    
+    <span class="mdc-select__selected-text">---------</span>
+    <div class="mdc-simple-menu mdc-select__menu">
+      <ul class="mdc-list mdc-simple-menu__items">
+    
+      
+      
+      <li class="mdc-list-item" role="option"  id="" aria-selected selected>---------</li>
+
+      
+      
+    
+      </ul>
+    </div>
+    
+  
+  </div>
+  
+<select name="file_path_field" id="id_file_path_field" class="mdc-select">
+  
+    
+    
+      <option class="mdc-list-item" disabled value="" selected>---------</option>
+
+    
+    
+  
+</select>
+
+</span></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="number" name="float_field" step="any" id="id_float_field" />
+  <label class="mdc-text-field__label" for="id_float_field">Float field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><span class="mdc-select-manager">
+  <label class="mdc-select__label" for="id_foreign_key">Foreign key</label>
+  <div role="listbox" tabindex="0" data-id="id_foreign_key" id="id_foreign_key" class="mdc-select">
+  
+    
+    <span class="mdc-select__selected-text">---------</span>
+    <div class="mdc-simple-menu mdc-select__menu">
+      <ul class="mdc-list mdc-simple-menu__items">
+    
+      
+      
+      <li class="mdc-list-item" role="option"  id="" aria-selected selected>---------</li>
+
+      
+      
+    
+      </ul>
+    </div>
+    
+  
+  </div>
+  
+<select name="foreign_key" id="id_foreign_key" class="mdc-select">
+  
+    
+    
+      <option class="mdc-list-item" disabled value="" selected>---------</option>
+
+    
+    
+  
+</select>
+
+</span></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="number" name="integer_field" id="id_integer_field" />
+  <label class="mdc-text-field__label" for="id_integer_field">Integer field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="text" name="generic_ip_address_field" id="id_generic_ip_address_field" />
+  <label class="mdc-text-field__label" for="id_generic_ip_address_field">Generic ip address field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><label class="mdc-select__label" for="id_many_to_many_field">Many to many field</label>
+<select name="many_to_many_field" id="id_many_to_many_field" multiple="multiple" class="mdc-multi-select mdc-list">
+  
+</select></div>
+<div><span class="mdc-select-manager">
+  <label class="mdc-select__label" for="id_null_boolean_field">Null boolean field</label>
+  <div role="listbox" tabindex="0" data-id="id_null_boolean_field" id="id_null_boolean_field" class="mdc-select">
+  
+    
+    <span class="mdc-select__selected-text">Unknown</span>
+    <div class="mdc-simple-menu mdc-select__menu">
+      <ul class="mdc-list mdc-simple-menu__items">
+    
+      
+      
+      <li class="mdc-list-item" role="option"  id="1" aria-selected selected>Unknown</li>
+
+      
+      
+    
+  
+    
+      
+      
+      <li class="mdc-list-item" role="option" tabindex="0" id="2">Yes</li>
+
+      
+      
+    
+  
+    
+      
+      
+      <li class="mdc-list-item" role="option" tabindex="0" id="3">No</li>
+
+      
+      
+    
+      </ul>
+    </div>
+    
+  
+  </div>
+  
+<select name="null_boolean_field" id="id_null_boolean_field" class="mdc-select">
+  
+    
+    
+      <option class="mdc-list-item" disabled value="1" selected>Unknown</option>
+
+    
+    
+  
+    
+    
+      <option class="mdc-list-item" value="2">Yes</option>
+
+    
+    
+  
+    
+    
+      <option class="mdc-list-item" value="3">No</option>
+
+    
+    
+  
+</select>
+
+</span></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="number" name="positive_integer_field" min="0" id="id_positive_integer_field" />
+  <label class="mdc-text-field__label" for="id_positive_integer_field">Positive integer field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="number" name="positive_small_integer_field" min="0" id="id_positive_small_integer_field" />
+  <label class="mdc-text-field__label" for="id_positive_small_integer_field">Positive small integer field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="text" name="slug_field" maxlength="50" id="id_slug_field" />
+  <label class="mdc-text-field__label" for="id_slug_field">Slug field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="number" name="small_integer_field" id="id_small_integer_field" />
+  <label class="mdc-text-field__label" for="id_small_integer_field">Small integer field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-form-field mdc-text-field mdc-text-field--textarea">
+  <textarea class="mdc-text-field__input" name="text_field" cols="40" rows="10" id="id_text_field"></textarea>
+  <label class="mdc-text-field__label" for="id_text_field">Text field</label>
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="text" name="time_field" id="id_time_field" />
+  <label class="mdc-text-field__label" for="id_time_field">Time field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+<div><div class="mdc-text-field">
+  <input class="mdc-text-field__input" type="url" name="url_field" maxlength="200" id="id_url_field" />
+  <label class="mdc-text-field__label" for="id_url_field">Url field</label>
+  <div class="mdc-text-field__bottom-line"></div>
+</div></div>
+        <button type="submit" class="mdc-button mdc-button--raised">Submit</button>
+        <button type="reset" class="mdc-button">Reset</button>
+      </form>
+    </div>
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+    
+    </div>
+    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-1"></div>
+  </div>
+</div>
+
+    <!-- Additional optional JS for deferred loading -->
+    
+<script type="text/javascript" src="https://unpkg.com/material-components-web@0.25.0/dist/material-components-web.min.js"></script>
+<script type="text/javascript" src="static/material_widgets/js/material_text_field.js"></script>
+<script type="text/javascript" src="static/material_widgets/js/material_checkbox.js"></script>
+<script type="text/javascript" src="static/material_widgets/js/material_button.js"></script>
+<script type="text/javascript" src="static/material_widgets/js/material_file_input.js"></script>
+<script type="text/javascript" src="static/material_widgets/js/material_select.js"></script>
+<!-- 
+  Place material_button.js after form.media.js to load mdc-web first.
+  We don't need to manually load material_button.js in this case because the 
+  clearable file input component calls it for us already.
+
+<script src="static/material_widgets/js/material_button.js"></script>
+-->
+
+  </body>
+</html>

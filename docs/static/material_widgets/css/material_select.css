@@ -1,0 +1,25 @@
+.mdc-select__label {
+  padding-right: 20px;
+}
+
+option.mdc-list-item:disabled {
+  color: rgba(0, 0, 0, .38);
+}
+
+.mdc-select-manager > select.mdc-select {
+  display: none;
+}
+
+.mdc-error .mdc-select {
+  border-color: #d50000;
+}
+
+@media (max-width: 600px) and (pointer: coarse) {
+  .mdc-select-manager > .mdc-select[role="listbox"] {
+    display: none;
+  }
+
+  .mdc-select-manager > select.mdc-select {
+    display: inline;
+  }
+}

@@ -1,0 +1,1 @@
+<option class="mdc-list-item"{% if first_item and not is_group %}{% if not has_label or is_multiwidget %} disabled{% endif %}{% endif %} value="{{ widget.value|stringformat:'s' }}"{% include "material_widgets/widgets/material_attrs.html" %}>{{ widget.label }}</option>

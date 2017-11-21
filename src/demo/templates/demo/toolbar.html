@@ -1,0 +1,14 @@
+<header class="mdc-toolbar">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <span class="mdc-toolbar__title">Django Material Widgets</span>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end mdc-toolbar__section--shrink-to-fit" role="toolbar">
+      <nav class="mdc-tab-bar">
+        <a href="{% url 'demo:index' %}" class="mdc-tab{% if current_tab == 'index' %} mdc-tab--active{% endif %}">MaterialForm</a>
+        <a href="{% url 'demo:modelform' %}" class="mdc-tab{% if current_tab == 'modelform' %} mdc-tab--active{% endif %}">MaterialModelForm</a>
+        <span class="mdc-tab-bar__indicator"></span>
+      </nav>
+    </section>
+  </div>
+</header>

@@ -1,0 +1,7 @@
+include LICENSE
+include README.rst
+recursive-include docs *
+recursive-include src/material_widgets *
+recursive-exclude src/demo *
+recursive-exclude src/config *
+global-exclude *.py[co]

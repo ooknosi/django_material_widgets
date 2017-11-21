@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="{% static 'demo/images/components-72x72.png' %}">
+    <meta name="description" content="Django Material Components Demo">
+    <meta name="keywords" content="django, material components, google">
+    <meta name="author" content="https://github.com/ooknosi">
+
+    <title>{% block title %}Demo{% endblock %} | Django Material Widgets</title>
+
+    <!-- Material Components -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Additional optional JS and CSS -->
+    {% block head %}{% endblock %}
+  </head>
+  <body class="mdc-typography" style="margin: 0px;"><!-- overrides margin: 8px from mdc-typography -->
+    {% block content %}{% endblock %}
+    <!-- Additional optional JS for deferred loading -->
+    {% block tail %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,5 @@
+let selects = document.querySelectorAll('.mdc-select-js');
+for (let i = 0, select; select = selects[i]; i++) {
+  let material_select = new mdc.select.MDCSelect(select);
+  material_select.listen('MDCSelect:change', () => document.getElementById(select.dataset.id).value = material_select.value);
+}

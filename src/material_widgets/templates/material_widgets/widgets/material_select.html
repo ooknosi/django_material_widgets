@@ -1,0 +1,26 @@
+<span class="mdc-select-manager">
+  {% if widget.label and not is_multiwidget %}<label class="mdc-select__label"{% if widget.attrs.id %} for="{{ widget.attrs.id }}"{% endif %}{% if widget.help_text %} title="{{ widget.help_text }}"{% endif %}>{{ widget.label }}</label>{% endif %}
+  <div role="listbox" tabindex="0"{% if widget.attrs.id %} data-id="{{ widget.attrs.id }}"{% endif %}{% include "material_widgets/widgets/material_attrs.html" %}>
+  {% for group_name, group_choices, group_index in widget.optgroups %}
+    {% if forloop.first %}
+    <span class="mdc-select__selected-text">{{ group_name|default:group_choices.0.label }}</span>
+    <div class="mdc-simple-menu mdc-select__menu">
+      <ul class="mdc-list mdc-simple-menu__items">
+    {% endif %}
+      {% if group_name %}
+        <ul class="mdc-list-group">{{ group_name }}
+      {% endif %}
+      {% for option in group_choices %}
+      {% include option.template_name with widget=option first_item=forloop.parentloop.first has_label=widget.label is_group=group_name %}
+      {% endfor %}
+      {% if group_name %}
+        </ul>
+      {% endif %}
+    {% if forloop.last %}
+      </ul>
+    </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+  {% include "material_widgets/widgets/material_select_nojs.html" with is_multiwidget=True %}
+</span>

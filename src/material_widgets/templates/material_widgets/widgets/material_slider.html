@@ -1,0 +1,21 @@
+{% if widget.label %}<label{% if widget.attrs.id %} for="{{ widget.attrs.id }}"{% endif %}>{{ widget.label }}</label>{% endif %} {% if widget.help_text %}<span {% include "material_widgets/widgets/material_help_text.html" %}</span>{% endif %}
+<div class="mdc-slider{% if widget.is_discrete %} mdc-slider--discrete{% if widget.display_markers %} mdc-slider--display-markers{% endif %}{% endif %}" tabindex="0" role="slider"{% if widget.attrs.id %} data-id="{{ widget.attrs.id }}"{% endif %}{% if widget.attrs.min %} aria-valuemin="{{ widget.attrs.min }}"{% endif %}{% if widget.attrs.max %} aria-valuemax="{{ widget.attrs.max }}"{% endif %}{% if widget.value is not None %} aria-valuenow="{{ widget.value|stringformat:'s' }}"{% endif %}{% if widget.attrs.step %} data-step="{{ widget.attrs.step }}"{% endif %} aria-label="{{ widget.label }}">
+  <div class="mdc-slider__track-container">
+    <div class="mdc-slider__track"></div>
+    {% if widget.is_discrete and widget.display_markers %}
+    <div class="mdc-slider__track-marker-container"></div>
+    {% endif %}
+  </div>
+  <div class="mdc-slider__thumb-container">
+    {% if widget.is_discrete %}
+    <div class="mdc-slider__pin">
+      <span class="mdc-slider__pin-value-marker"></span>
+    </div>
+    {% endif %}
+    <svg class="mdc-slider__thumb" width="21" height="21">
+      <circle cx="10.5" cy="10.5" r="7.875"></circle>
+    </svg>
+    <div class="mdc-slider__focus-ring"></div>
+  </div>
+  <input type="hidden"{% if widget.value is not None %} value="{{ widget.value|stringformat:'s' }}"{% endif %}{% if widget.attrs.id %} id="{{ widget.attrs.id }}"{% endif %} name="{{ widget.name }}" />
+</div>

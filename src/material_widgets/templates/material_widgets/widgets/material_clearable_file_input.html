@@ -1,0 +1,15 @@
+<input class="mdc-fileinput" type="{{ widget.type }}" name="{{ widget.name }}" {% if widget.attrs.multiple %}data-multiple-files-label="{ count } files selected" {% endif %}{% include "material_widgets/widgets/material_attrs.html" %} /><{% if is_initial %}a href="{{ widget.value.url }}"{% else %}label{% endif %} class="mdc-button{% if widget.button %}{% for modifier in widget.button %} mdc-button--{{ modifier }}{% endfor %}{% endif %}"{% if widget.attrs.id %} for="{{ widget.attrs.id }}"{% endif %}{% if widget.help_text %} title="{{ widget.help_text }}"{% endif %}>{% if widget.icon %}<i class="material-icons">{{ widget.icon }}</i> {% endif %}<span>{% if is_initial %}{{ widget.value }}{% else %}{% if widget.label %}{{ widget.label }}{% endif %}{% endif %}</span></{% if is_initial %}a{% else %}label{% endif %}>
+{% if is_initial and not widget.required %}
+<div class="mdc-form-field">
+  <div class="mdc-checkbox">
+    <input class="mdc-checkbox__native-control" type="checkbox" name="{{ checkbox_name }}" id="{{ checkbox_id }}" />
+    <div class="mdc-checkbox__background">
+      <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+        <path class="mdc-checkbox__checkmark__path" fill="none" stroke="white" d="M1.73,12.91 8.1,19.28 22.79,4.59">
+      </svg>
+      <div class="mdc-checkbox__mixedmark"></div>
+    </div>
+  </div>
+  <label for="{{ checkbox_id }}">{{ clear_checkbox_label }}</label>
+</div>
+{% endif %}

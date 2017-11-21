@@ -1,0 +1,11 @@
+<div class="mdc-form-field mdc-switch__form-field">
+  {% if widget.label %}
+  <label class="mdc-switch__label" {% if widget.attrs.id %} for="{{ widget.attrs.id }}"{% endif %}{% if widget.help_text %} title="{{ widget.help_text }}"{% endif %}>{{ widget.label }}</label>
+  {% endif %}
+  <div class="mdc-switch">
+    {% include "material_widgets/widgets/material_input.html" with class="mdc-switch__native-control" tooltip=widget.help_text %}
+    <div class="mdc-switch__background">
+      <div class="mdc-switch__knob"></div> 
+    </div>
+  </div>
+</div>

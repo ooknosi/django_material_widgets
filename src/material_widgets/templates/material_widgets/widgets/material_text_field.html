@@ -1,0 +1,6 @@
+<div class="mdc-text-field{% if widget.value or widget.attrs.autofocus %} mdc-text-field--upgraded{% endif %}">
+  <input class="mdc-text-field__input" type="{{ widget.type }}" name="{{ widget.name }}"{% if widget.value %} value="{{ widget.value|stringformat:'s' }}"{% endif %}{% if widget.attrs.id and widget.help_text %} aria-controls="{{ widget.attrs.id }}-helper-text"{% endif %}{% include "material_widgets/widgets/material_attrs.html" %} />
+  {% if widget.label %}<label class="mdc-text-field__label{% if widget.value or widget.attrs.autofocus %} mdc-text-field__label--float-above{% endif %}"{% if widget.attrs.id %} for="{{ widget.attrs.id }}"{% endif %}>{{ widget.label }}</label>{% endif %}
+  <div class="mdc-text-field__bottom-line"></div>
+</div>
+{% if widget.help_text %}<p {% include "material_widgets/widgets/material_help_text.html" %}</p>{% endif %}

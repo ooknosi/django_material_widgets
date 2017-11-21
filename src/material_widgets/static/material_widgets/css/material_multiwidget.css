@@ -1,0 +1,9 @@
+.mdc-multiwidget {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.mdc-multiwidget__label {
+  padding-right: 24px;
+}

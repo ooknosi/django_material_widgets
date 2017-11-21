@@ -1,0 +1,11 @@
+.mdc-error .mdc-text-field__label {
+  color: #d50000;
+}
+
+.mdc-error .mdc-text-field__input {
+  border-color: #d50000;
+}
+
+.mdc-error .mdc-text-field__bottom-line {
+  background-color: #d50000;
+}

@@ -1,0 +1,9 @@
+/* $mdc-text-field-error-on-light: #d50000; */
+
+.mdc-errorlist {
+  color: #d50000;
+}
+
+.mdc-error {
+  color: #d50000;
+}

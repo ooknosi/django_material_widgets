@@ -1,0 +1,14 @@
+{% if widget.label and not is_multiwidget %}<label class="mdc-select__label"{% if widget.attrs.id %} for="{{ widget.attrs.id }}"{% endif %}{% if widget.help_text %} title="{{ widget.help_text }}"{% endif %}>{{ widget.label }}</label>{% endif %}
+<select name="{{ widget.name }}"{% include "material_widgets/widgets/material_attrs.html" %}>
+  {% for group_name, group_choices, group_index in widget.optgroups %}
+    {% if group_name %}
+    <optgroup class="mdc-list-group" label="{{ group_name }}">
+    {% endif %}
+    {% for option in group_choices %}
+      {% include "material_widgets/widgets/material_select_option_nojs.html" with widget=option first_item=forloop.parentloop.first has_label=widget.label is_group=group_name %}
+    {% endfor %}
+    {% if group_name %}
+    </optgroup>
+    {% endif %}
+  {% endfor %}
+</select>
