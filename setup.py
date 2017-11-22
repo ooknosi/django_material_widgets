@@ -12,7 +12,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-material-widgets',
-    version='1.0.0b1',
+    version='1.0.0b3',
     packages=find_packages('src', exclude=['demo', 'config',]),
     package_dir={'':'src'},
     include_package_data=True,
