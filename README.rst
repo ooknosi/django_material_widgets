@@ -44,24 +44,25 @@ Quick Start
     - Add ``{{ form.media.css }}`` to your ``<head>`` tag::
 
         <head>
+            ...
             {{ form.media.css }}
         </head>
 
     - Add the ``mdc-typography`` CSS class to your ``<body>`` tag::
 
-      <body class="mdc-typography">
+      <body class="mdc-typography" ...>
 
     - Add ``{{ form.media.js }}`` to the bottom of your ``<body>`` tag::
 
-        <body class="mdc-typography">
+        <body class="mdc-typography" ...>
             ...
-
             {{ form.media.js }}
         </body>
 
-    - (Optional) Add stylesheet links::
+    - (Optional) Add font and icon stylesheet links if required::
 
         <head>
+            ...
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         </head>
@@ -73,12 +74,12 @@ https://ooknosi.github.com/django_material_widgets
 
 To view the demo locally at ``http://localhost:8000``:
 
-.. code:: bash
+.. code-block:: bash
 
-    git clone https://github.com/ooknosi/django_material_widgets.git
-    cd django_material_widgets/src
-    python manage.py migrate --settings=demo.settings
-    python manage.py runserver --settings=demo.settings
+    $ git clone https://github.com/ooknosi/django_material_widgets.git
+    $ cd django_material_widgets/src
+    $ python manage.py migrate --settings=demo.settings
+    $ python manage.py runserver --settings=demo.settings
 
 
 Documentation
@@ -88,7 +89,7 @@ http://django-material-widgets.readthedocs.io/en/latest/
 
 .. _Material Components for the Web: https://material.io/components/web/
 
-.. |screenshot| image:: screenshot.png
+.. |screenshot| image:: https://raw.githubusercontent.com/ooknosi/django_material_widgets/master/screenshot.png
                 :width: 100%
                 :alt: Click to view demo
                 :target: https://ooknosi.github.com/django_material_widgets
