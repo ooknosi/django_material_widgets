@@ -25,6 +25,9 @@ setup(
     url='https://github.com/ooknosi/django_material_widgets',
     author='Edison KOO',
     #author_email='',
+    install_requires=[
+        'Django',
+        ]
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
