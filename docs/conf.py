@@ -23,6 +23,11 @@ BASE_DIR = os.path.dirname(os.path.abspath('.'))
 sys.path.insert(0, BASE_DIR)
 sys.path.insert(0, os.path.join(BASE_DIR, 'src'))
 
+### Allows readthedocs to access django and build using autodocs
+os.environ['DJANGO_SETTINGS_MODULE'] = 'config.settings.readthedocs'
+import django
+django.setup()
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
