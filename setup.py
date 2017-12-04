@@ -27,7 +27,7 @@ setup(
     #author_email='',
     install_requires=[
         'Django',
-        ]
+        ],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
