@@ -1,2 +1,2 @@
 -r base.txt  # include base requirements
-../src/
+../src/material_widgets/
