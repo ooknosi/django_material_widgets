@@ -84,12 +84,12 @@ To view the demo locally at ``http://localhost:8000``:
 
 Documentation
 -------------
-http://django-material-widgets.readthedocs.io/en/latest/
+http://django-material-widgets.readthedocs.io
 
 
 .. _Material Components for the Web: https://material.io/components/web/
 
-.. |screenshot| image:: https://raw.githubusercontent.com/ooknosi/django_material_widgets/master/screenshot.png
+.. |screenshot| image:: https://raw.githubusercontent.com/ooknosi/django_material_widgets/master/docs/screenshot.png
                 :width: 100%
                 :alt: Click to view demo
                 :target: https://ooknosi.github.com/django_material_widgets
@@ -98,7 +98,7 @@ http://django-material-widgets.readthedocs.io/en/latest/
             :target: https://pypi.python.org/pypi/django-material-widgets
 
 .. |docs| image:: https://img.shields.io/readthedocs/django-material-widgets.svg
-          :target: http://django-material-widgets.readthedocs.io/en/latest/
+          :target: http://django-material-widgets.readthedocs.io
 
 .. |pypi| image:: https://img.shields.io/pypi/v/django-material-widgets.svg
           :target: https://pypi.python.org/pypi/django-material-widgets
