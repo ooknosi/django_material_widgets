@@ -20,11 +20,11 @@ Path joins can be used as long as they result in a valid URL string.
 from django.conf import settings
 
 MATERIAL_CSS = getattr(settings, 'MATERIAL_CSS',
-                       ("https://unpkg.com/material-components-web@latest"
+                       ("https://unpkg.com/material-components-web@0.25.0"
                         + "/dist/material-components-web.min.css")
                       )
 
 MATERIAL_JS = getattr(settings, 'MATERIAL_JS',
-                      ("https://unpkg.com/material-components-web@latest"
+                      ("https://unpkg.com/material-components-web@0.25.0"
                        + "/dist/material-components-web.min.js")
                      )
