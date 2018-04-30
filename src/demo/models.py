@@ -44,6 +44,7 @@ class MaterialWidgetsDemoModel(models.Model):
     float_field = models.FloatField(null=True, blank=True)
     foreign_key = models.ForeignKey(
         MaterialWidgetsForeignKeyDemoModel,
+        models.CASCADE,
         null=True,
         blank=True,
         )
