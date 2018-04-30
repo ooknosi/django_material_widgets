@@ -94,6 +94,9 @@ def materialize_field(name, field):
     field.widget.label = (field.label if field.label is not None
                           else name.replace('_', ' ').title())
     field.widget.help_text = field.help_text
+
+    if isinstance(field.help_text, (list, tuple)):
+        field.help_text = ''.join(field.help_text)
     return field
 
 
