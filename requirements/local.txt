@@ -21,7 +21,7 @@ Pygments==2.2.0
 pylint==1.7.4
 pylint-django==0.7.2
 pylint-plugin-utils==0.2.6
-PyYAML==3.12
+PyYAML==5.4
 requests==2.18.4
 requests-toolbelt==0.8.0
 six==1.11.0
