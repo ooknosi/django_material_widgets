@@ -17,7 +17,7 @@ mccabe==0.6.1
 pathtools==0.1.2
 pkginfo==1.4.1
 port-for==0.3.1
-Pygments==2.2.0
+Pygments==2.7.4
 pylint==1.7.4
 pylint-django==0.7.2
 pylint-plugin-utils==0.2.6
