@@ -32,6 +32,6 @@ sphinxcontrib-websupport==1.0.1
 tornado==4.5.2
 tqdm==4.19.4
 twine==1.9.1
-urllib3==1.22
+urllib3==1.26.5
 watchdog==0.8.3
 wrapt==1.10.11
